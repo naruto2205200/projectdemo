@@ -1,11 +1,15 @@
 package com.example.demo.domain;
 
+import java.io.Serializable;
+
 /**
  * @author zhangxiaofeng
  * @Describetion
  * @date 2019/2/2215:19
  */
-public class User extends Person {
+public class User extends Person implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private Integer id;
     private String name;
     private Integer age;
