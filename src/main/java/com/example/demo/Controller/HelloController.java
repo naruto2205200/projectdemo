@@ -1,8 +1,11 @@
 package com.example.demo.Controller;
 
+import com.example.demo.domain.Comment;
 import com.example.demo.domain.News;
 import com.example.demo.domain.User;
+import com.example.demo.service.CommentService;
 import com.example.demo.utils.UserUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -18,6 +21,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/hello")
 public class HelloController {
+
+    @Autowired
+    private CommentService commentService;
 
     @GetMapping(value="/getlunbo",produces = "application/json;charset=UTF-8")
     public List<User> getlunbo(){
@@ -119,4 +125,14 @@ public class HelloController {
     }
 
 
+    @GetMapping(value = "/comments/{newsId}",produces = "application/json;charset=UTF-8")
+    public List<Comment> getCommentListByNewsId(@PathVariable Integer newsId){
+        return commentService.getCommentListByNewsId(newsId);
+    }
+
+    @PostMapping(value = "/addComment", produces = "application/json;charset=UTF-8")
+    public int addComment(@RequestBody Comment comment) {
+        System.out.println(comment.toString());
+        return 1;
+    }
 }
