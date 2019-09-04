@@ -1,8 +1,6 @@
 package com.example.demo.Controller;
 
-import com.example.demo.domain.Comment;
-import com.example.demo.domain.News;
-import com.example.demo.domain.User;
+import com.example.demo.domain.*;
 import com.example.demo.service.CommentService;
 import com.example.demo.utils.UserUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -135,4 +133,16 @@ public class HelloController {
         System.out.println(comment.toString());
         return 1;
     }
+
+    @GetMapping(value = "/getAllCategory",produces = "application/json;charset=UTF-8")
+    public List<Category> getAllCategory(){
+        return commentService.getAllCategory();
+    }
+
+    @GetMapping(value = "/getPhotoList/{cateId}",produces = "application/json;charset=UTF-8")
+    public List<Photo> getPhotoList(@PathVariable Integer cateId){
+        System.out.println(""+cateId);
+        return commentService.getPhotoList(cateId);
+    }
+
 }

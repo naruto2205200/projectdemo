@@ -26,10 +26,12 @@ public class Demo3 {
 
 //        List<Map<String, Object>> currentPlantAmouts = null;
 //        Stream<Map<String, Object>> stream = currentPlantAmouts.stream();
-        BigDecimal bd = new BigDecimal(2092759.21 /667).setScale(2, BigDecimal.ROUND_HALF_UP);
-        DecimalFormat df = new DecimalFormat("#,###.##");
-//        map.put("area",df.format(bd)+" 亩");
-        System.out.println(df.format(bd));
+//        BigDecimal bd = new BigDecimal(2092759.21 /667).setScale(2, BigDecimal.ROUND_HALF_UP);
+//        DecimalFormat df = new DecimalFormat("#,###.##");
+////        map.put("area",df.format(bd)+" 亩");
+//        System.out.println(df.format(bd));
+
+
 
     }
 }

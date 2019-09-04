@@ -1,6 +1,8 @@
 package com.example.demo.service;
 
+import com.example.demo.domain.Category;
 import com.example.demo.domain.Comment;
+import com.example.demo.domain.Photo;
 
 import java.util.List;
 
@@ -12,5 +14,7 @@ import java.util.List;
 public interface CommentService {
     List<Comment> getCommentListByNewsId(Integer newsId);
 
+    List<Category> getAllCategory();
 
+    List<Photo> getPhotoList(Integer cateId);
 }
