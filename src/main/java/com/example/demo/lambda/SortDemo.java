@@ -58,8 +58,12 @@ public class SortDemo {
 //        Map<Integer, Long> collect4 = userList.stream().collect(Collectors.groupingBy(item -> item.getAge(), Collectors.counting()));
 
         //过滤
-//        List<User> collect2 = userList.stream().filter(item -> item.getAge()==11).collect(Collectors.toList());
-//        userList.stream().filter(item->item.getAge()==1)
+        List<User> collect2 = userList.stream().filter(item -> item.getAge()==15).collect(Collectors.toList());
+        for (User user : collect2) {
+            user.setAge(50);
+        }
+        System.out.println(11111);
+//        userList.stream().filter(item->item.getAge()==1);
 
         //统计
 //        list.stream().mapToDouble(User::getHeight).sum()//和
