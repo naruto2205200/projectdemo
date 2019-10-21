@@ -18,10 +18,11 @@ public class Demo4 {
 
     public static void main(String[] args) throws ParseException {
 
-        Date date = stringToDate("2019-09-12");
-        SimpleCalendar.Element element = SimpleCalendar.getCalendarDetail(date);
-
-        System.out.println(JSONObject.toJSON(element));
+//        Date date = stringToDate("2019-09-12");
+//        SimpleCalendar.Element element = SimpleCalendar.getCalendarDetail(date);
+//
+//        System.out.println(JSONObject.toJSON(element));
+        System.out.println(7/2);
 
 
     }
