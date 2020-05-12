@@ -134,6 +134,12 @@ public class HelloController {
         return 1;
     }
 
+    @PostMapping(value = "/addComment2", produces = "application/json;charset=UTF-8")
+    public int addComment2(@RequestBody Comment comment) {
+        System.out.println(comment.toString());
+        return 1;
+    }
+
     @GetMapping(value = "/getAllCategory",produces = "application/json;charset=UTF-8")
     public List<Category> getAllCategory(){
         return commentService.getAllCategory();
@@ -144,5 +150,8 @@ public class HelloController {
         System.out.println(""+cateId);
         return commentService.getPhotoList(cateId);
     }
+
+
+
 
 }

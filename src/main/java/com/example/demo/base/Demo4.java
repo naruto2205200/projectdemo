@@ -22,8 +22,12 @@ public class Demo4 {
 //        SimpleCalendar.Element element = SimpleCalendar.getCalendarDetail(date);
 //
 //        System.out.println(JSONObject.toJSON(element));
-        System.out.println(7/2);
-
+//        System.out.println(7/2);
+//
+//        Byte b1 = 3;
+//        int i = 3;
+//        System.out.println(b1.equals(i));
+//        System.out.println(b1==i);
 
     }
 
